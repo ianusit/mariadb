@@ -7,4 +7,6 @@ RUN apk add --update mysql &&\
     chown -R mysql:mysql /var/lib/mysql &&\
     rm -rf /var/cache/apk/*
 
+USER mysql
+
 CMD ["mysqld_safe"]
