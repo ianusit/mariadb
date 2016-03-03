@@ -2,7 +2,7 @@ FROM alpine:3.3
 
 MAINTAINER Ianus IT GmbH <info@ianus-it.de>
 
-RUN apk add --update mysql &&\
+RUN apk add --update mariadb mariadb-client &&\
     mkdir -p /var/lib/mysql &&\
     mkdir -p /run/mysqld &&\
     chown -R mysql:mysql /var/lib/mysql &&\
