@@ -11,4 +11,4 @@ RUN apk add --update mariadb mariadb-client &&\
 
 USER mysql
 
-CMD ["mysqld_safe"]
+CMD ["mysqld", "--bind-address=0.0.0.0", "--skip-networking=0"]
