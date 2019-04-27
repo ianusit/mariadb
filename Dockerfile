@@ -11,4 +11,4 @@ RUN apk add --update mariadb mariadb-client &&\
 
 USER mysql
 
-CMD ["mysqld", "--bind-address=0.0.0.0", "--skip-networking=0"]
+CMD ["mysqld", "--max-allowed-packet=128M", "--bind-address=0.0.0.0", "--skip-networking=0"]
